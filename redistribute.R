@@ -3,9 +3,9 @@ library(sf)
 library(data.table)
 library(exactextractr)
 
-setwd("C:/Users/wkerr/Dropbox/who2023/south_sudan_pop_2023")
+# setwd("C:/Users/wkerr/Dropbox/who2023/south_sudan_pop_2023")
 
-pop2020 <- raster("ssd_ppp_2020_UNadj.tif")
+pop2020 <- raster("https://www.dropbox.com/scl/fi/if7873ad0thvbn352lvic/ssd_ppp_2020_UNadj.tif?rlkey=d73xi9fo29go2mc9s4gnffmuk&dl=1")
 
 pop2023 <- as.data.table(readxl::read_excel("ssd_2023_population_estimates_data.xlsx"))
 names(pop2023)[6] <- "pop2024"
